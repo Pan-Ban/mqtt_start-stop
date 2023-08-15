@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(120deg, #a077ed 0%, #ffdfba 100%);
+  box-sizing: border-box;
+}
+
+.line {
+  border: 3px solid #333;
+  width: 300px;
+  margin: 0.5em auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  padding: 0.25em 0;
+}
+
+.wrapper {
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  margin: 1em auto;
+  max-width: 400px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.25em;
+}
+
+#startButton {
+  background-color: #8bc34a;
+}
+
+#stopButton {
+  background-color: #ff5722;
+}
+
+.form-row > button {
+  padding: 0.5em;
+  margin: 5px 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  font-size: 1.2em;
+  color: white;
+  border: 0;
+  flex: 1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-row > button:hover {
+  opacity: 0.9;
+}
+
+#msgWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+
+#msgWrapper > label {
+  padding: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+#msgWrapper > textarea,
+.status {
+  padding: 0.5em;
+  resize: vertical;
+  margin: 5px 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  font-size: 1.2em;
+  background-color: rgb(242, 248, 248);
+  text-align: center;
+  width: 100%;
+}
+
+#msgWrapper > textarea {
+  height: 200px; /* Reduced height */
+}
+
+.status {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
