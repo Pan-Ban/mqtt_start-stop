@@ -44,12 +44,12 @@ class MqttClient {
 
     startBtn.addEventListener("click", () => {
       this.publishMessage("startProcess", "0");
-      this.publishMessage("robotInChargingPos", "True"); // test value
+      this.publishMessage("robotInChargingPos", "1"); // test value
       this.publishMessage("systemStatus", "250"); // test value
     });
     stopBtn.addEventListener("click", () => {
       this.publishMessage("endProcess", "1");
-      this.publishMessage("robotOK", "True"); // test value
+      this.publishMessage("robotOK", "0"); // test value
       this.publishMessage("systemStatus", "250"); // test value
     });
   }
