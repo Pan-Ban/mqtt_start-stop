@@ -63,13 +63,14 @@ class MqttClient {
   }
 
   handleMessage(topic, message, packet) {
+    let now = new Date();
+    let currentTime = `${now.toLocaleTimeString()}.${now.getMilliseconds().toString().padStart(3, '0')}`;
     console.log(
-      "Received Message: " + message.toString() + "\nOn topic: " + topic
+      currentTime.toString() + " " + "Received Message: " + message.toString() + "\nOn topic: " + topic
     );
     const messageTextArea = document.querySelector("#message");
-    messageTextArea.value += topic +", "+ message + "\r\n";
+    messageTextArea.value += currentTime.toString() + " - " + topic +", "+ message + "\r\n";
 
-    // const msgConfirmation = document.querySelector(".status");
     if (topic.toString() == "startProcess") {
       document.getElementById("statStartProcess").value = message;
       document.getElementById("statEndProcess").value = "";
