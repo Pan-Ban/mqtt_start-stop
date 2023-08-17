@@ -71,23 +71,23 @@ class MqttClient {
 
     // const msgConfirmation = document.querySelector(".status");
     if (topic.toString() == "startProcess") {
-      document.getElementById("statStartProcess").value = "Topic startProcess: " + message;
-      document.getElementById("statEndProcess").value = "Topic endProcess:";
+      document.getElementById("statStartProcess").value = message;
+      document.getElementById("statEndProcess").value = "";
     }
     if (topic.toString() == "robotOK") {
-      document.getElementById("statRobotOK").value = "Topic robotOK: " + message;
-      document.getElementById("statRobotInChargingPos").value = "Topic RobotInChargingPos:";
+      document.getElementById("statRobotOK").value = message;
+      document.getElementById("statRobotInChargingPos").value = "";
     }
     if (topic.toString() == "robotInChargingPos") {
-      document.getElementById("statRobotInChargingPos").value = "Topic RobotInChargingPos: " + message;
-      document.getElementById("statRobotOK").value = "Topic robotOK:";
+      document.getElementById("statRobotInChargingPos").value = message;
+      document.getElementById("statRobotOK").value = "";
     }
     if (topic.toString() == "endProcess") {
-      document.getElementById("statEndProcess").value = "Topic endProcess: " + message;
-      document.getElementById("statStartProcess").value = "Topic startProcess:";
+      document.getElementById("statEndProcess").value = message;
+      document.getElementById("statStartProcess").value = "";
     }
     if (topic.toString() == "systemStatus") {
-      document.getElementById("statSystemStatus").value = "Topic systemStatus: " + message;
+      document.getElementById("statSystemStatus").value = message;
     }
   }
 

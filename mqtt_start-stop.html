@@ -12,7 +12,6 @@
 
 <body>
   <h1>Start/Stop Charging</h1>
-  <!-- <div class="line"></div> -->
   <ul class="wrapper">
     <li class="form-row">
       <button id="startButton" type="button" class="publish">Start</button>
@@ -21,26 +20,33 @@
       <button id="stopButton" type="button" class="publish">Stop</button>
     </li>
     <li class="form-row">
+      <li class="form-row status-container">
+        <label for="statStartProcess" class="status-label">startProcess:</label>
+        <input type="text" id="statStartProcess" class="status-input" readonly />
+      </li>
+      <li class="form-row status-container">
+        <label for="statRobotOK" class="status-label">robotOK:</label>
+        <input type="text" id="statRobotOK" class="status-input" readonly />
+      </li>
+      <li class="form-row status-container">
+        <label for="statRobotInChargingPos" class="status-label">robotInChargingPos:</label>
+        <input type="text" id="statRobotInChargingPos" class="status-input" readonly />
+      </li>
+      <li class="form-row status-container">
+        <label for="statEndProcess" class="status-label">endProcess:</label>
+        <input type="text" id="statEndProcess" class="status-input" readonly />
+      </li>
+      <li class="form-row status-container">
+        <label for="statSystemStatus" class="status-label">systemStatus:</label>
+        <input type="text" id="statSystemStatus" class="status-input" readonly />
+      </li> 
+      <!-- <li class="form-row"></li> -->
+      <hr>
       <div id="msgWrapper">
         <label for="message">Topic, Message:</label>
         <textarea id="message" name="message" rows="10"  readonly></textarea>
       </div>
-    </li>
-    <li class="form-row">
-      <input type="text" id="statStartProcess" class="status" value="Topic startProcess:" readonly />
-    </li>
-    <li class="form-row">
-      <input type="text" id="statRobotOK" class="status" value="Topic robotOK:" readonly />
-    </li>
-    <li class="form-row">
-      <input type="text" id="statRobotInChargingPos" class="status" value="Topic robotInChargingPos:" readonly />
-    </li>
-    <li class="form-row">
-      <input type="text" id="statEndProcess" class="status" value="Topic endProcess:" readonly />
-    </li>
-    <li class="form-row">
-      <input type="text" id="statSystemStatus" class="status" value="Topic systemStatus:" readonly />
-    </li>
+    </li>     
   </ul>
   <script src="mqtt_start-stop.js"></script>
 </body>
