@@ -103,3 +103,5 @@ class MqttClient {
 }
 
   let mqttt = new MqttClient();
+
+//тестване
