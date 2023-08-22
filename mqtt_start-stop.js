@@ -2,7 +2,10 @@ class MqttClient {
   constructor() {
     this.mqttClient = null;
     this.config = {
+      
+      //Enter mqtt host
       host: "ws://broker.emqx.io:8083/mqtt",
+      
       clientId: "client" + Math.random().toString(36).substring(7),
       options: {
         keepalive: 60,
@@ -44,13 +47,9 @@ class MqttClient {
 
     startBtn.addEventListener("click", () => {
       this.publishMessage("startProcess", "0");
-      this.publishMessage("robotInChargingPos", "1"); // test value
-      this.publishMessage("systemStatus", "250"); // test value
     });
     stopBtn.addEventListener("click", () => {
       this.publishMessage("endProcess", "1");
-      this.publishMessage("robotOK", "0"); // test value
-      this.publishMessage("systemStatus", "250"); // test value
     });
   }
 
