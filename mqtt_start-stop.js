@@ -94,8 +94,7 @@ class MqttClient {
   subscribeToTopic() {
   this.mqttClient.subscribe("robotOK", { qos: 2 }); 
   this.mqttClient.subscribe("robotInChargingPos", { qos: 2 });
-  this.mqttClient.subscribe("systemStatus", { qos: 2 });
-  
+  this.mqttClient.subscribe("systemStatus", { qos: 2 });  
   this.mqttClient.subscribe("startProcess", { qos: 2 });
   this.mqttClient.subscribe("endProcess", { qos: 2 });
   }
